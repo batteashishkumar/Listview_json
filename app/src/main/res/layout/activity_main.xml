@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1">
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:text="JSON DATA:"
+            android:gravity="center"
+            android:textSize="20dp"/>
+           />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:id="@+id/empty"
+        android:scrollbars="vertical"
+        android:text="empty space"
+        android:background="@color/colorPrimaryDark"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:weightSum="1">
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+            android:layout_weight=".4"
+        android:text="LIST VIEW:"
+        android:gravity="center"
+        android:textSize="20dp"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:hint="id"
+            android:id="@+id/edit"
+            android:gravity="center"
+            android:textSize="20dp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:text="go"
+            android:onClick="search"
+            android:gravity="center"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:id="@+id/mobile_list">
+    </ListView>
+
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
